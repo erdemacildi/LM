@@ -17,7 +17,13 @@ MonoBehaviour:
   description: 
   preview: {fileID: 0}
   dependencies:
+  - dependency: {fileID: 7400000, guid: 75bbddfbd40803744a3bd63f08415a31, type: 2}
+    instantiationMode: 0
   - dependency: {fileID: 3919005568247453854, guid: c161bd92d0ef1f74ab53319f2a2772e1, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 9100000, guid: 138338eaed2d8e24dbe705997c609a7c, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 7400000, guid: e61f0df5bafed844da24b4111146ce97, type: 2}
     instantiationMode: 0
   templatePipeline: {fileID: 0}
   badge: {fileID: 0}

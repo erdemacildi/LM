@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     GameObject SpinningCircle;
     GameObject MainCircle;
+    public Animator Animator;
     void Start()
     {
         SpinningCircle = GameObject.FindGameObjectWithTag("SpinningCircleTag");
@@ -16,5 +17,6 @@ public class GameManager : MonoBehaviour
     {
         SpinningCircle.GetComponent<Spinning>().enabled = false;
         MainCircle.GetComponent<MainCircle>().enabled = false;
+        Animator.SetTrigger("GameOverTrigger");
     }
 }
