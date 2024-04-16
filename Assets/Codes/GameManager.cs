@@ -14,11 +14,18 @@ public class GameManager : MonoBehaviour
         MainCircle = GameObject.FindGameObjectWithTag("MainCircleTag");
     }
 
-    public void GameOver()
+    public void GameOver() 
+    {
+        StartCoroutine(GameO());
+    }
+
+    IEnumerator GameO()
     {
         SpinningCircle.GetComponent<Spinning>().enabled = false;
         MainCircle.GetComponent<MainCircle>().enabled = false;
         Animator.SetTrigger("GameOverTrigger");
+
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene("MainMenu");
     }
 }
