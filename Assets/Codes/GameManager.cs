@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,5 +19,6 @@ public class GameManager : MonoBehaviour
         SpinningCircle.GetComponent<Spinning>().enabled = false;
         MainCircle.GetComponent<MainCircle>().enabled = false;
         Animator.SetTrigger("GameOverTrigger");
+        SceneManager.LoadScene("MainMenu");
     }
 }
