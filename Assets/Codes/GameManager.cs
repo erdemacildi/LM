@@ -2,16 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     GameObject SpinningCircle;
     GameObject MainCircle;
     public Animator Animator;
+    public Text SpinningCircleLevel;
+    public Text one;
+    public Text two;
+    public Text three;
     void Start()
     {
         SpinningCircle = GameObject.FindGameObjectWithTag("SpinningCircleTag");
         MainCircle = GameObject.FindGameObjectWithTag("MainCircleTag");
+        SpinningCircleLevel.text = SceneManager.GetActiveScene().name;
     }
 
     public void GameOver() 
