@@ -5,10 +5,11 @@ using UnityEngine;
 public class MainCircle : MonoBehaviour
 {
     public GameObject smallCircle;
+    GameObject GameManage;
 
     void Start()
     {
-        
+        GameManage = GameObject.FindGameObjectWithTag("GameManagerTag");
     }
     void Update()
     {
@@ -21,5 +22,6 @@ public class MainCircle : MonoBehaviour
     void GenerateSmallCircle()
     {
         Instantiate(smallCircle,transform.position,transform.rotation);
+        GameManage.GetComponent<GameManager>().circleLeft();
     }
 }
